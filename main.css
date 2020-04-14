@@ -1,0 +1,72 @@
+body {
+	background-image: url(img/back_girl.jpg);
+	background-position: top;
+	background-repeat: no-repeat;
+	margin: 0px;
+	padding: 0px;
+
+}
+
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+#Head {
+	background-color: blueviolet;
+	width: 400px;
+	height: 250px;
+	clear: both;
+	float: right;
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+	border-style: none;
+}
+
+#img_head {
+	position: relative;
+	float: left;
+	z-index: 1;
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+	z-index: 1;
+}
+
+#ava_bear {
+	position: relative;
+	top: -140px;
+	left: 0px;
+	width: 110px;
+	height: 110px;
+	z-index: 2;
+}
+
+pre {
+	text-transform: full-width;
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	font-size: 50px;
+	color: chocolate;
+	font-family: cursive;
+}
+
+p {
+	
+	font-size: 18px;
+	color: chocolate;
+	font-family: cursive;
+}
+
+
+
+.Text {
+	margin: 0px;
+	padding: 0px;
+	position: fixed;
+	top: 50px;
+	color: red;
+	z-index: 3;
+}

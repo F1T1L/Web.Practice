@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Pragma" content="no-cache" />
+
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<title>FORMS</title>
+	<style>
+		body {
+			margin: 0px;
+			padding: 0px;
+			background: url(img/back_orange.jpg);
+			background-position: top;
+			background-repeat: no-repeat;
+
+		}
+
+		.main_form {
+			margin: 10% auto;
+			height: 300px;
+			width: 600px;
+			border: 1px;
+			border-style: groove;
+			border-color: black;
+			border-right-color: black;
+			background-color: whitesmoke;
+			box-shadow: 1px 1px 10px #888888;
+			position: relative;
+
+		}
+
+		.Mytext {
+			text-align: center;
+			font-size: 18px;
+			color: chocolate;
+			font-family: cursive;
+
+		}
+	</style>
+
+	<script type="text/javascript">
+		function firstf() {
+			for (var iter = 0; iter <= 25; iter++) {
+				document.write("<p>Hello. its my first WORD!");
+			}
+function firstf();
+			
+	</script>
+</head>
+
+<body>
+	<div class="main_form Mytext" id="main_form">
+
+		<script type="text/javascript">
+			var writeInDiv = document.getElementById('main_form');
+			writeInDiv.innerHTML = '<p>test<br/>';
+			var a = [1, 2, 3, 4, 5, 6];
+			writeInDiv.innerHTML += a;
+			document.write("<p>asd");
+
+		</script>
+
+	</div>
+</body>
+</html>

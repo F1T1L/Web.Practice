@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Holy Grail, часть 3</title>
+    <meta charset="utf-8">
+    <link href="course.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <style>html,
+    body {
+        height: 100%;
+    }
+
+    .table-layout {
+        display: table;
+        width: 100%;
+        height: 100%;
+    }
+
+    header,
+    footer {
+        display: table-row;
+        height: 1px;
+    }
+
+    main {
+        display: table;
+        width: 100%;
+        height: 100%;
+        border-spacing: 10px;
+    }
+
+    .content,
+    .side {
+        display: table-cell;
+    }
+
+    .side {
+        width: 100px;
+    }
+    </style>
+</head>
+<body>
+<div class="table-layout">
+    <header>
+        <h1>Кексогалерея</h1>
+    </header>
+    <main>
+        <div class="side">
+            <p>Левая колонка</p>
+        </div>
+        <div class="content">
+            <p>Основная колонка</p>
+        </div>
+        <div class="side">
+            <p>Правая колонка</p>
+        </div>
+    </main>
+    <footer class="sticky-footer">
+        <img class="footer-logo" src="keks.jpg" alt="">
+        <p class="copyright">2015 Cat Energy</p>
+        <p class="author">Keks, keks@htmlacademy.ru</p>
+    </footer>
+</div>
+</body>
+</html>

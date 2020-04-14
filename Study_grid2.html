@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>inline-block и пробелы в коде</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="setting.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h1 {
+        margin: 0;
+        margin-bottom: 0.5em;
+        font-size: 18px;
+    }
+
+    .container {
+        width: 400px;
+        margin: 20px auto;
+    }
+
+    .catalog {
+        width: 400px;
+        background-color: #ecf0f1;
+        box-shadow: 0 0 3px #999999;
+    }
+
+    .item {
+        display: inline-block;
+        width: 116px;
+        min-height: 75px;
+        margin-right: 15px;
+        margin-bottom: 20px;
+        vertical-align: top;
+        text-align: center;
+        font-size: 16px;
+        color: white;
+        background-color: #3498db;
+        border: 2px solid #2c3e50;
+    }
+
+    .item:nth-child(3n) {
+        margin-right: 0;
+    }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Каталог в три колонки</h1>
+    <div class="catalog">
+        <div class="item">Товар</div>
+        <div class="item">Товар</div>
+        <div class="item">Товар</div>
+        <div class="item">Товар</div>
+        <div class="item">Товар</div>
+        <div class="item">Товар</div>
+        <div class="item">Товар</div>
+        <div class="item">Товар</div>
+    </div>
+</div>
+</body>
+</html>

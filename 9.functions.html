@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Pragma" content="no-cache" />
+
+	<title>FORMS</title>
+	<style>
+		body {
+
+			background: url(img/back_orange.jpg);
+			background-position: top;
+			background-repeat: no-repeat;
+
+		}
+
+		.main_form {
+
+			border: 1px;
+			border-style: groove;
+			border-color: black;
+			border-right-color: black;
+			background-color: whitesmoke;
+			box-shadow: 1px 1px 10px #888888;
+			position: absolute;
+
+		}
+
+		#container {
+			position: absolute;
+			top: 50%;
+			margin-top: -200px;
+			/* half of #content height*/
+			left: 0;
+			width: 100%;
+		}
+
+		#content {
+
+			width: 624px;
+			margin-left: auto;
+			margin-right: auto;
+			
+			min-height: 395px;
+			border: 1px solid #000000;
+			
+		}
+
+		.Mytext {
+			text-align: center;
+			font-size: 18px;
+			color: chocolate;
+			font-family: cursive;
+
+
+		}
+	</style>
+
+
+</head>
+
+<body>
+	<div class="Mytext" id="container">
+		<div id="content">
+			<script type="text/javascript">
+				function FF(x) {
+					for (var i = 0; i <= x; i++) {
+
+
+						document.write("<pre>Hello from MySecondFunction!Hello from MySecondFunction!");
+					}
+				}
+				FF(15);
+			</script>
+		</div>
+	</div>
+
+</body>
+</html>

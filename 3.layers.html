@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Порядок карт</title>
+	<style type="text/css">
+		.card IMG {
+			position: relative;
+		}
+
+		.three {
+			top: 50px;
+			left: 55px;
+			z-index: 2;
+			width: 100px;
+			height: 100px;
+		}
+
+		.seven {
+			left: 10px;
+			top: 25px;
+			z-index: 3;
+			width: 100px;
+			height: 100px;
+			background-color: aqua;
+			mix-blend-mode: multiply;
+		}
+
+		.ace {
+			left: -30px;
+			z-index: 1;
+			width: 100px;
+			height: 100px;
+		}
+
+		.card IMG:hover {
+			z-index: 10;
+		}
+		circle { mix-blend-mode: multiply; }
+
+	</style>
+</head>
+
+<body>
+<svg>
+  <circle cx="40" cy="40" r="40" fill="cyan"/>
+  <circle cx="80" cy="40" r="40" fill="magenta"/>
+  <circle cx="60" cy="80" r="40" fill="yellow"/>
+</svg>
+	<p class="card">
+		<img src="img/avatar-261.jpg" alt="3" class="three" />
+		<img src="img/avatar-261.jpg" alt="7" class="seven" />
+		<img src="img/avatar-261.jpg" alt="Туз" class="ace" />
+	</p>
+</body>
+</html>

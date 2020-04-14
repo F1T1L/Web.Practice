@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		body {
+			margin: 0px;
+			padding: 0px;
+			background: url(img/back_orange.jpg);
+			background-position: top;
+			background-repeat: repeat;
+
+		}
+		.outer-container {
+			position: absolute;
+			display: table;
+			width: 100%;
+			height: 100%;
+
+		}
+
+		.inner-container {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+		}
+		.inner-container2 {
+			display: table, table-cell;
+			vertical-align: middle;
+			text-align: center;
+		}
+
+		.main_div{
+			display: inline-block;
+			text-align: left;
+			padding: 10px;
+			height: 190px;
+			width: 200px;
+			clear: both;
+			border: 1px;
+			border-style: groove;
+			border-color:  black;
+			background-color:whitesmoke;
+			box-shadow: 3px 3px 55px #888888;
+			position: relative;
+			z-index: 1;
+		}
+		.err_div
+		{
+			display: inline;
+			text-align: center;
+			padding: 10px;
+			margin: 5px;
+			height: 20px;
+			width: 200px;
+			border: 1px;
+			border-style: groove;
+			border-color:  black;
+			background-color:whitesmoke;
+			box-shadow: 1px 1px 15px #888888;
+			clear: both;
+			color: chocolate;
+			position: relative;
+			
+			z-index: 5;
+		}
+
+	</style>
+</head>
+<script>
+
+    $( document ).ready(function() {
+
+            var base = [];
+            base["login@login.ru"]="asd";
+
+        /*   function auth(login1, psw1){
+                if(login1 in base ){
+                    if(base[login1]===psw1){
+                        return true;
+                    }  else  {
+                        return  false;
+                    }
+                }
+			return false;
+            }
+*/
+            //console.dir("lasd" in base);
+
+            //бред)) всевдокод
+            //    base =({"login@login.ru":"asd"});
+            //  base["login"] = password;
+            //	base.push[login]=password;
+            //  base.push("login")
+
+            function loginError(message){
+				var item = document.createElement("div");
+                    item.className = "err_div";
+                    item.id = "err_div";
+                    //  console.dir(div);
+                    document.getElementById("main").appendChild(item);
+                    item.innerHTML=message;
+                    setTimeout(function () {item.parentNode.removeChild(item); }, 3000);
+			}
+		
+		
+            var test= function check() {
+                var pattern = /\b[a-z0-9._]+@[a-z0-9.-]+\.[a-z]{2,4}\b/;
+                var login = document.getElementById("login").value;
+                var psw = document.getElementById("password").value;
+//
+                if (!pattern.test(login)) {
+                    //console.dir(login.match(pattern));
+                   // alert("Не правильный логин или пароль");
+               loginError("Введите почту в поле Login");
+                }
+                else {
+                    if ( login in base) {
+                        if(base[login]===psw){
+                            loginError("Добро пожаловать ХОЗЯИН!");
+							
+                        }
+                        else {
+                            loginError("Забыли пароль?");
+                        }
+                    }
+                    else {
+                        loginError("Пользователь не найден.");
+                    }
+                }
+            };
+
+            document.getElementById("login_button").onclick=test;
+            //   document.getElementById("delete_button").onclick=delB;
+
+            //  $('#login_button').click(test);
+
+        }
+
+    );
+    //
+    // document.write(text + " -> " + pattern.test(text) + "<br />");
+    // var pElem = document.createElement("li");
+    // pElem.innerHTML="Elem";
+    // list.insertBefore(pElem, list.firstChild);
+</script>
+<body>
+<div class="outer-container">
+	<div class="inner-container " >
+		<div class="main_div" >
+			
+		
+		
+		
+		
+			<pre align="center" style="color:darkorange; text-shadow:1px 1px 2px black;font-size: 25px; margin: 15px 5px 3px 5px; font-style: normal;">Login</pre>
+			<input style="color: darkslategray; width: 80%; margin: 0px 19px; height:20px; border-radius: 5px;box-shadow: 1px 1px 1px rgba(0,0,0,0.5); text-align: center;" 
+			type="text" name="login" placeholder="Введите ваш E-mail" autocomplete="on" id="login" />
+			<br/>
+			<pre align="center" style="color:darkorange; text-shadow:1px 1px 2px black;font-size: 25px; margin: 5px 5px 3px 5px; font-style: normal;">Password</pre>
+			<input style="color: darkslategray; width: 80%; margin: 0px 19px;
+		height:20px;border-radius: 5px; box-shadow: 1px 1px 1px rgba(0,0,0,0.5);text-align: center; " type="password" name="password" value="длинныйпароль" autocomplete="on" id="password" onfocus="this.value=''"  />
+			 <input style="color:darkorange; text-shadow:1px 1px 2px black;font-size: 20px; margin: 13px 30px 15px 32px; font-style: normal;  width: 70%;
+		height:28px;border-radius: 5px; box-shadow: 1px 1px 15px rgba(0,0,0,0.5);text-align: center; background-color:#a89ca4;cursor: pointer;" 
+		type="button" name="login_button" value="ENTER" id="login_button" autofocus/>
+			<!--	<input style="color:darkorange; text-shadow:1px 1px 2px black;font-size: 20px; margin: 13px 30px 15px 32px; font-style: normal; ; width: 70%;
+            height:28px;border-radius: 5px; box-shadow: 1px 1px 15px rgba(0,0,0,0.5);text-align: center; background-color:dimgray;cursor: pointer;" 
+			type="button" name="login_button" value="DELETE" id="delete_button" />
+            --></div>
+		<div class="inner-container2" id="main">
+
+		</div>
+	</div>
+
+</div>
+</body>
+</html>
